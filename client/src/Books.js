@@ -22,6 +22,7 @@ class Books extends Component {
  .query({q: this.state.searchField})
  .then((data)=>{
      this.setState({books:[...data.body.items]})
+     console.log(data.body)
  })
     }
 
