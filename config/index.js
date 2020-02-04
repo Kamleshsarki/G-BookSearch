@@ -1,8 +1,10 @@
-const mongoose = require('mongoose')
+// // fixes the proxy error message
+// host: 0.0.0.0
+// port: 3000
 
-const MONDODB_URI = process.env.MONDODB_URI || 'mongodb://localhost/googlebooks'
-
-module.exports = mongoose.connect(MONDODB_URI, {
+const MONGODB_URI = "mongodb://localhost/googlebooks";
+module.exports = require('mongoose').connect(MONGODB_URI, {
+  // these methods are rarely used
   useCreateIndex: true,
   useFindAndModify: true,
   useNewUrlParser: true,
